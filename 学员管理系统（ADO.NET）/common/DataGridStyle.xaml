@@ -1,0 +1,59 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:学员管理系统_ADO.NET_.common">
+    <Style TargetType="DataGrid">
+        <!--不会自动生成每一列，只会根据绑定的列生成-->
+        <Setter Property="AutoGenerateColumns" Value="False"></Setter>
+        <!--不许单个列大小调整-->
+        <Setter Property="CanUserResizeColumns" Value="False"></Setter>
+        <!--所有单元格为只读-->
+        <Setter Property="IsReadOnly" Value="True"></Setter>
+        <!--获取或设置行头的宽度-->
+        <Setter Property="RowHeaderWidth" Value="0"></Setter>
+        <!--获取或设置一个值用来判断是否允许用户按列对表中内容进行排序-->
+        <Setter Property="CanUserSortColumns" Value="False"></Setter>
+        <!--获取或设置DataGrid的选取模式-->
+        <Setter Property="SelectionMode" Value="Single"></Setter>
+    </Style>
+    <Style TargetType="DataGridColumnHeader">
+        <!--宽度-->
+        <Setter Property="Height" Value="30"></Setter>
+        <Setter Property="FontWeight" Value="Bold"></Setter>
+        <!--居中设置-->
+        <Setter Property="HorizontalContentAlignment" Value="Center"></Setter>
+        <!--字体大小-->
+        <Setter Property="FontSize" Value="16"></Setter>
+    </Style>
+    <Style TargetType="DataGridRow">
+        <Setter Property="Height" Value="28"></Setter>
+        <Style.Triggers>
+            <Trigger Property="IsSelected" Value="True">
+                <Setter Property="Background" Value="Cyan"></Setter>
+            </Trigger>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Background" Value="Purple"></Setter>
+                <Setter Property="Foreground" Value="White"></Setter>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+    <Style TargetType="DataGridCell">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="DataGridCell">
+                    <!--居中设置-->
+                    <TextBlock TextAlignment="Center" VerticalAlignment="Center">
+                        <ContentPresenter></ContentPresenter>
+                    </TextBlock>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Style.Triggers>
+            <Trigger Property="IsSelected" Value="True">
+                <Setter Property="Foreground" Value="Blue"></Setter>
+                <Setter Property="FontWeight" Value="Bold"></Setter>
+                <!--边框线透明-->
+                <Setter Property="BorderThickness" Value="0"></Setter>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+</ResourceDictionary>

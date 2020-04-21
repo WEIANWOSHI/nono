@@ -1,0 +1,340 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8FA1E708-EB0C-4F5E-BD8A-F72E650CE6A0}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>学员管理系统_ADO.NET_</RootNamespace>
+    <AssemblyName>学员管理系统（ADO.NET）</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>CustomerOrder.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ReachFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Printing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="WPFMediaKit, Version=2.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\WPFMediaKit.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="common\BitmapImg.cs" />
+    <Compile Include="view\FrmaddStuInfor.xaml.cs">
+      <DependentUpon>FrmaddStuInfor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="view\FrmAttendance.xaml.cs">
+      <DependentUpon>FrmAttendance.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="view\FrmImportData.xaml.cs">
+      <DependentUpon>FrmImportData.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="view\FrmPrintWindow.xaml.cs">
+      <DependentUpon>FrmPrintWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="view\FrmScoreList.xaml.cs">
+      <DependentUpon>FrmScoreList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="view\FrmscorelistAdd.xaml.cs">
+      <DependentUpon>FrmscorelistAdd.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="view\FrmScoreListinfor.xaml.cs">
+      <DependentUpon>FrmScoreListinfor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="view\FrmStudentInfor.xaml.cs">
+      <DependentUpon>FrmStudentInfor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="view\FrmStudentPhoto.xaml.cs">
+      <DependentUpon>FrmStudentPhoto.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="view\FrmstuManger.xaml.cs">
+      <DependentUpon>FrmstuManger.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="view\FrmUpdateStuInfor.xaml.cs">
+      <DependentUpon>FrmUpdateStuInfor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="view\FrmWebBrowser.xaml.cs">
+      <DependentUpon>FrmWebBrowser.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="view\scorelistFENGXI.xaml.cs">
+      <DependentUpon>scorelistFENGXI.xaml</DependentUpon>
+    </Compile>
+    <Page Include="common\DataGridStyle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="common\PrintModel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FrmLogin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FrmMain.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="view\FrmaddStuInfor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="view\FrmAttendance.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="view\FrmImportData.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="view\FrmPrintWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="view\FrmScoreList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="view\FrmscorelistAdd.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="view\FrmScoreListinfor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="view\FrmStudentInfor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="view\FrmStudentPhoto.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="view\FrmstuManger.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="view\FrmUpdateStuInfor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="view\FrmWebBrowser.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="view\scorelistFENGXI.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FrmLogin.xaml.cs">
+      <DependentUpon>FrmLogin.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMain.xaml.cs">
+      <DependentUpon>FrmMain.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="img\bg\log.webp" />
+    <None Include="img\bg\zuo.webp" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\bg\face.png" />
+    <Resource Include="img\bg\left.png" />
+    <Resource Include="img\bg\log.png" />
+    <Resource Include="img\bg\mian.jpg" />
+    <Resource Include="img\bg\头像2.png" />
+    <Resource Include="img\ico\add.bmp" />
+    <Resource Include="img\ico\adds.ico" />
+    <Resource Include="img\ico\checks.ico" />
+    <Resource Include="img\ico\Close.ico" />
+    <Resource Include="img\ico\daka.ico" />
+    <Resource Include="img\ico\favicon.ico" />
+    <Resource Include="img\ico\find.ico" />
+    <Resource Include="img\ico\help.ico" />
+    <Resource Include="img\ico\inline.ico" />
+    <Resource Include="img\ico\kaoqin.ico" />
+    <Resource Include="img\ico\Query.ico" />
+    <Resource Include="img\ico\sm.ico" />
+    <Resource Include="img\ico\socre.ico" />
+    <Resource Include="img\ico\student.ico" />
+    <Resource Include="img\ico\sys.ico" />
+    <Resource Include="img\ico\update.ico" />
+    <Resource Include="img\ico\writes.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Common\Common.csproj">
+      <Project>{6ef2bead-0243-465a-863e-664daec129ea}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\StudentManagerBLL\StudentManagerBLL.csproj">
+      <Project>{d967a1dd-c4b3-4410-bcac-cb269daf03c9}</Project>
+      <Name>StudentManagerBLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\StudentsManagerModer\StudentsManagerModer.csproj">
+      <Project>{ab420e22-5a76-407f-94b2-e891af568af8}</Project>
+      <Name>StudentsManagerModer</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\bg\today.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\ico\daochu.ico" />
+    <Resource Include="img\ico\daoru.ico" />
+    <Resource Include="img\ico\delete.ico" />
+    <Resource Include="img\ico\down.ico" />
+    <Resource Include="img\ico\exit.ico" />
+    <Resource Include="img\ico\guan.ico" />
+    <Resource Include="img\ico\IE.ico" />
+    <Resource Include="img\ico\jiang.ico" />
+    <Resource Include="img\ico\PC.ico" />
+    <Resource Include="img\ico\Phone.ico" />
+    <Resource Include="img\ico\print.ico" />
+    <Resource Include="img\ico\qiehuan.ico" />
+    <Resource Include="img\ico\sheng.ico" />
+    <Resource Include="img\ico\tjcx.ico" />
+    <Resource Include="img\ico\up.ico" />
+    <Resource Include="img\ico\xiugai.ico" />
+    <Resource Include="img\pic\today.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\bg\zuo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\bg\log .jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\ico\stuInfor.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\bg\bg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\ico\photo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\ico\Icons.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\ico\sure.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\ico\cacle.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\bg\zwzp.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\bg\jiatu.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\ico\1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\ico\5.jpg" />
+    <Resource Include="img\ico\Cancel.ico" />
+    <Resource Include="img\ico\save.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\ico\CustomerOrder.ico" />
+    <Resource Include="img\ico\DataBase.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\ico\Printico.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\ico\3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\ico\人物3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="CustomerOrder.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\WPFMediaKit.2.2.0\build\WPFMediaKit.targets" Condition="Exists('..\packages\WPFMediaKit.2.2.0\build\WPFMediaKit.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>这台计算机上缺少此项目引用的 NuGet 程序包。使用“NuGet 程序包还原”可下载这些程序包。有关更多信息，请参见 http://go.microsoft.com/fwlink/?LinkID=322105。缺少的文件是 {0}。</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\WPFMediaKit.2.2.0\build\WPFMediaKit.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\WPFMediaKit.2.2.0\build\WPFMediaKit.targets'))" />
+  </Target>
+</Project>

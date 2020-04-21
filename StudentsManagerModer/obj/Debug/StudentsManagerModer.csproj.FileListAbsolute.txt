@@ -1,0 +1,5 @@
+D:\D-文档\c#(C Sharp)\vs-text\学员管理系统（ADO.NET）\StudentsManagerModer\bin\Debug\StudentsManagerModer.dll
+D:\D-文档\c#(C Sharp)\vs-text\学员管理系统（ADO.NET）\StudentsManagerModer\bin\Debug\StudentsManagerModer.pdb
+D:\D-文档\c#(C Sharp)\vs-text\学员管理系统（ADO.NET）\StudentsManagerModer\obj\Debug\StudentsManagerModer.dll
+D:\D-文档\c#(C Sharp)\vs-text\学员管理系统（ADO.NET）\StudentsManagerModer\obj\Debug\StudentsManagerModer.pdb
+D:\D-文档\c#(C Sharp)\vs-text\学员管理系统（ADO.NET）\StudentsManagerModer\obj\Debug\StudentsManagerModer.csprojAssemblyReference.cache

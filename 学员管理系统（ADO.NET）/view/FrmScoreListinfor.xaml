@@ -1,0 +1,39 @@
+﻿<Window x:Class="学员管理系统_ADO.NET_.view.FrmScoreListinfor"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:学员管理系统_ADO.NET_.view"
+        mc:Ignorable="d"
+        Title="修改页面" Height="300" Width="400" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Icon="/img/ico/stuinfor.ico">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/img/bg/bg.jpg" Opacity="0.7"></ImageBrush>
+        </Grid.Background>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="100"></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Label Content="c#:" FontSize="30" VerticalContentAlignment="Center" HorizontalAlignment="Center"></Label>
+        <TextBox x:Name="textcshap" Grid.Row="0" Grid.Column="1" FontSize="18" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" HorizontalAlignment="Left" Height="35" Width="200" BorderBrush="Black"></TextBox>
+        <Label Content="SQL:" FontSize="30" Grid.Row="1" VerticalContentAlignment="Center" HorizontalAlignment="Center"></Label>
+        <TextBox x:Name="textsql" Grid.Row="1" Grid.Column="1" FontSize="18" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" HorizontalAlignment="Left" Height="35" Width="200" BorderBrush="Black"></TextBox>
+        <Button Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="2" Width="150" Height="50" HorizontalAlignment="Left" x:Name="btnSureUpdate" Click="btnSureUpdate_Click">
+            <DockPanel>
+                <Image Source="/img/ico/sure.ico" Height="20"></Image>
+                <Label Padding="0" Content="确认修改" FontSize="16"></Label>
+            </DockPanel>
+        </Button>
+        <Button Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="2" Width="150" Height="50" HorizontalAlignment="Right" x:Name="btnCancle" Click="btnCancle_Click">
+            <DockPanel>
+                <Image Source="/img/ico/cacle.ico" Height="20"></Image>
+                <Label Content="取消修改" FontSize="16" Padding="0"></Label>
+            </DockPanel>
+        </Button>
+    </Grid>
+</Window>
